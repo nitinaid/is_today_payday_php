@@ -22,13 +22,13 @@ class MyHomeWork {
 	 * @assert (30, 1,1,2014) == "xxx"
 	 * @assert (31, 1,1,2014) == "xxx"
 	 */
-	public function salaryIsPaid($today, $friday = 1, $month, $year) {
-		$is_friday = $this->isFriday( $friday ,$month, $year);
+	public function salaryIsPaid($today, $day = 1, $month, $year) {
+		$is_friday = $this->isFriday( $day ,$month, $year);
 		switch ($today) {
 			case 1 :
-				if ($is_friday && $friday == 23) {
+				if ($is_friday && $day == 23) {
 					$msg = '22 day left';
-				} else if ($is_friday && $friday == 24) {
+				} else if ($is_friday && $day == 24) {
 					$msg = '23 day left';
 				} else {
 					$msg = '24 day left';
@@ -37,9 +37,9 @@ class MyHomeWork {
 				break;
 			
 			case 2 :
-				if ($is_friday && $friday == 23) {
+				if ($is_friday && $day == 23) {
 					$msg = '21 day left';
-				} else if ($is_friday && $friday == 24) {
+				} else if ($is_friday && $day == 24) {
 					$msg = '22 day left';
 				} else {
 					$msg = '23 day left';
@@ -48,9 +48,9 @@ class MyHomeWork {
 				break;
 			
 			case 24 :
-				if ($is_friday && $friday == 23) {
+				if ($is_friday && $day == 23) {
 					$msg = '23 day left';
-				} else if ($is_friday && $friday == 24) {
+				} else if ($is_friday && $day == 24) {
 					$msg = '24 day left';
 				} else {
 					$msg = 'tomorow';
